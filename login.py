@@ -1,35 +1,35 @@
-import tkinter as tk
+from tkinter import *
+from tkinter import messagebox
 
-def login():
-    username = username_entry.get()
-    password = password_entry.get()
-    if username == "admin" and password == "password":
-        result_label.config(text="Login successful!")
-    else:
-        result_label.config(text="Invalid username or password")
+root = Tk()
+root.title('Login')
+root.geometry('925x500+300+200')
+root.configure(bg="#fff")
+root.resizable(False,False)
 
-root = tk.Tk()
-root.geometry("300x200")
-root.title("Login Form")
+img = PhotoImage(file='login.png')
+Label(root,image=img,bg='white').place(x=50,y=50)
 
-# Username label and entry
-username_label = tk.Label(root, text="Username:")
-username_label.pack()
-username_entry = tk.Entry(root)
-username_entry.pack()
+frame = Frame(root,width=350,height=350,bg="white")
+frame.place(x=480,y=70)
 
-# Password label and entry
-password_label = tk.Label(root, text="Password:")
-password_label.pack()
-password_entry = tk.Entry(root, show="*")
-password_entry.pack()
+heading=Label(frame,text='Log in', fg='#57a1f8',bg='white',font=('Tahoma',23,'bold'))
+heading.place(x=100,y=5)
+#---------------------------
+user = Entry(frame,width=25,fg='black',border=0,bg="white",font=('Tahoma',11))
+user.place(x=30,y=80)
+user.insert(0,'Username')
 
-# Login button
-login_button = tk.Button(root, text="Login", command=login)
-login_button.pack()
+Frame(frame,width=295,height=2,bg='black').place(x=25,y=107)
+#---------------------------
+code = Entry(frame,width=25,fg='black',border=0,bg="white",font=('Tahoma',11))
+code.place(x=30,y=150)
+code.insert(0,'Password')
 
-# Result label
-result_label = tk.Label(root, text="")
-result_label.pack()
+Frame(frame,width=295,height=2,bg='black').place(x=25,y=177)
 
-root.mainloop()
+Button(frame,width=39,pady=7,text='Log In', bg='#57a1f8',fg='white',border=0).place(x=35,y=204)
+
+
+
+root=mainloop()
