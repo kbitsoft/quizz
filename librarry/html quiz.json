@@ -1,0 +1,87 @@
+{
+    "quiz": {
+    "name": "HTML MCQ Quiz",
+	"test_no": "01",
+    "questions": [
+    {
+    "question": "Q1. What does HTML stand for?",
+    "options": ["Hyperlinks and Text Markup Language", "Hyper Text Markup Language", "Hyperlink Text Marking Language", "Hyper Text Markup Link"],
+    "answer": 2
+    },
+    {
+    "question": "Q2. Which tag is used to define an image in HTML?",
+    "options": ["<img>", "<picture>", "<image>", "<photo>"],
+    "answer": 1
+    },
+    {
+    "question": "Q3. Which HTML attribute is used to define inline styles?",
+    "options": ["class", "style", "id", "font"],
+    "answer": 2
+    },
+    {
+    "question": "Q4. Which tag is used to define a hyperlink in HTML?",
+    "options": ["<a>", "<link>", "<href>", "<url>"],
+    "answer": 1
+    },
+    {
+    "question": "Q5. Which attribute is used to specify a unique name for an HTML element?",
+    "options": ["id", "class", "name", "unique"],
+    "answer": 1
+    },
+    {
+    "question": "Q6. Which tag is used to define a table in HTML?",
+    "options": ["<table>", "<tab>", "<tbl>", "<tr>"],
+    "answer": 1
+    },
+    {
+    "question": "Q7. Which tag is used to define a list item in HTML?",
+    "options": ["<li>", "<ol>", "<ul>", "<list>"],
+    "answer": 1
+    },
+    {
+    "question": "Q8. Which attribute is used to specify the alternate text for an image in HTML?",
+    "options": ["alt", "title", "description", "name"],
+    "answer": 1
+    },
+    {
+    "question": "Q9. Which tag is used to define a heading in HTML?",
+    "options": ["<h1>", "<head>", "<header>", "<heading>"],
+    "answer": 1
+    },
+    {
+    "question": "Q10. Which tag is used to define a paragraph in HTML?",
+    "options": ["<p>", "<para>", "<text>", "<pg>"],
+    "answer": 1
+    },
+    {
+    "question": "Q11. Which tag is used to define a form in HTML?",
+    "options": ["<form>", "<input>", "<button>", "<fieldset>"],
+    "answer": 1
+    },
+    {
+    "question": "Q12. Which attribute is used to specify the background color of an HTML element?",
+    "options": ["bgcolor", "color", "background-color", "bg"],
+    "answer": 1
+    },
+    {
+    "question": "Q13. Which tag is used to define a line break in HTML?",
+    "options": ["<br>", "<break>", "<lb>", "<newline>"],
+    "answer": 1
+    },
+    {
+    "question": "Q14. Which attribute is used to specify the width of an HTML element?",
+    "options": ["width", "size", "height", "length"],
+    "answer": 1
+    },
+    {
+    "question": "Q15. Which tag is used to define a footer in HTML?",
+    "options": ["<footer>", "<foot>", "<bottom>", "<end>"],
+    "answer": 1
+    }
+    
+    
+  
+    
+        ]
+    }
+}

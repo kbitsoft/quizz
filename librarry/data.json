@@ -1,6 +1,7 @@
 {
     "quiz": {
-        "name": "MCQ Quiz",
+        "name": "python",
+		"test_no": "01",
         "questions": [
             {
                 "question": "Q1. Is Python case sensitive when dealing with identifiers?",
