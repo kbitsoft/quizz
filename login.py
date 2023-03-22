@@ -64,7 +64,7 @@ def login():
         elif user[2] == 'admin':
             # redirect to fileupload.py
             root.destroy() # close the login window
-            subprocess.Popen(["python", "fileupload.py"]) # import and run the fileupload module
+            subprocess.Popen(["python", "admin_dash_board.py"]) # import and run the fileupload module
     else:
         result_label.config(text="Invalid username or password")
     

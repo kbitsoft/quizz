@@ -39,8 +39,9 @@ def enroll_user():
 def get_result():
  subprocess.Popen(["python", "admin_user_result.py"])     
        
-Button(frame,width=39,pady=7,text='Add Users', command=get_result, bg='#57a1f8',fg='white',border=0).place(x=180,y=50)
-Button(frame,width=39,pady=7,text='Update Users', command=get_result, bg='#57a1f8',fg='white',border=0).place(x=180,y=90)
-Button(frame,width=39,pady=7,text='Delete Users', command=get_result, bg='#57a1f8',fg='white',border=0).place(x=180,y=130)
-Button(frame,width=39,pady=7,text='Enroll Users', command=get_result, bg='#57a1f8',fg='white',border=0).place(x=180,y=170)
+Button(frame,width=39,pady=7,text='Add Users', command=add_user, bg='#57a1f8',fg='white',border=0).place(x=180,y=50)
+Button(frame,width=39,pady=7,text='Update Users', command=update_user, bg='#57a1f8',fg='white',border=0).place(x=180,y=90)
+Button(frame,width=39,pady=7,text='Delete Users', command=delete_user, bg='#57a1f8',fg='white',border=0).place(x=180,y=130)
+Button(frame,width=39,pady=7,text='Enroll Users', command=enroll_user, bg='#57a1f8',fg='white',border=0).place(x=180,y=170)
 Button(frame,width=39,pady=7,text='User\'s Results', command=get_result, bg='#57a1f8',fg='white',border=0).place(x=180,y=210)
+root.mainloop()

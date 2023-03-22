@@ -8,7 +8,7 @@ class FileUpload(Frame):
         super().__init__(master)
         self.master = master
         self.master.title("Quiz Master")
-        self.master.geometry("800x500")
+        self.master.geometry('925x500+300+200')
         self.master.config(bg="#f2f2f2")
         self.pack(expand=True, fill=BOTH)
         self.create_widgets()
