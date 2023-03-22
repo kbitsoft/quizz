@@ -15,7 +15,7 @@ class Mcq:
         self.navigation()
 
     def set_title(self):
-        title = Label(gui, text="MCQ Quizz", width=50, bg="blue", fg="white", font=("ariel",20,"bold"))
+        title = Label(gui, text=quiz_name, width=50, bg="blue", fg="white", font=("ariel",20,"bold"))
         title.place(x=0,y=2)
 
     def display_question(self):
@@ -77,7 +77,7 @@ class Mcq:
         wrong = f"Wrong: {wrong_count}"
         score = int(correct_count / self.num_of_q * 100)
         result = f"Score: {score}%\n{correct}\n{wrong}"
-        mb.showinfo("Result", result)
+        
 
         # show marks for each question
         marks_display = ""
@@ -95,7 +95,7 @@ class Mcq:
                     mark_display = "X" if mark[i] == False else "✓"
                 options_display += f"({option_num}) {option} {mark_display}\n"
             marks_display += f"{question}{options_display}{response}{correct}\n\n"
-
+            marks_display += "Result:"+result
         mb.showinfo("Marks", marks_display)
 
 
@@ -103,10 +103,10 @@ class Mcq:
 
 gui = Tk()
 gui.geometry("800x450")
-gui.title("Test Quiz")
+gui.title("Quiz Master")
 
 try:
-    with open('data.json') as f:
+    with open('library/html quiz.json') as f:
         data = json.load(f)
 except Exception as e:
     print(f"Error loading data from JSON file: {e}")
@@ -116,6 +116,6 @@ num_of_q = len(questions)
 q_no = 0
 mark = [0 for i in questions]
 respons = [0 for i in questions]
-
+quiz_name=data["quiz"]["name"]
 mcq = Mcq()
 gui.mainloop()

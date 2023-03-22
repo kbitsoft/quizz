@@ -1,8 +1,8 @@
 from tkinter import *
 from tkinter import messagebox
 import mysql.connector
-
-
+import hashlib#encrypt password
+import subprocess #to open another process
     
 root = Tk()
 root.title('Login')
@@ -47,20 +47,27 @@ def login():
     # get username and password from entries
     username = uname.get()
     password = code.get()
-
+    # Hash the password using SHA256
+    password = hashlib.sha256(password.encode()).hexdigest()
     # execute query to retrieve user info from database
-    query = "SELECT * FROM users WHERE username=%s"
-    cursor.execute(query, (username,))
+    query = "SELECT * FROM users WHERE username=%s and password=%s"
+    cursor.execute(query, (username,password))
     user = cursor.fetchone()
+    
 
-    if user is not None and user[3] == password:
-        result_label.config(text="Login successful!")
+    if user is not None:
+         # check the role of the user
+        if user[2] == 'student':
+            # redirect to quizv2.3.py
+            root.destroy() # close the login window
+            subprocess.Popen(["python", "quizv2.3.py"])# import and run the quizv2.3 module
+        elif user[2] == 'admin':
+            # redirect to fileupload.py
+            root.destroy() # close the login window
+            subprocess.Popen(["python", "fileupload.py"]) # import and run the fileupload module
     else:
         result_label.config(text="Invalid username or password")
-
-    # close database connection
-    db.close()
     
 Button(frame,width=39,pady=7,text='Log In', command=login, bg='#57a1f8',fg='white',border=0).place(x=35,y=204)
 
-root=mainloop()
+root.mainloop()
